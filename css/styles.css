@@ -11,7 +11,7 @@
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-#homepage-background {
+body {
     background: url('../washington_university_background_copy.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
