@@ -1,3 +1,8 @@
-for (var i = 0; i < 99; i++) {
-    console.log("hi");
-}
+$(window).on("load", function () {
+    setTimeout(function () {
+        $("#intro-fade-in").animate({
+            "-webkit - animation": "fadein 2s"
+        });
+    }, 1000);
+
+});

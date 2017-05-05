@@ -1,7 +1,3 @@
-.navbar-brand {
-    font-size: 20px;
-}
-
 * {
     color: white;
 }
@@ -20,11 +16,6 @@ body {
     height: 100%;
 }
 
-
-/* 
-Navbar items
- */
-
 .navbar-brand {
     font-weight: bold;
     font-size: 23px;
@@ -32,6 +23,10 @@ Navbar items
 
 
 /*Eric Goodman*/
+
+.navbar {
+    display: none;
+}
 
 #intro-fade-in {
     padding-top: 140px;
@@ -41,15 +36,7 @@ Navbar items
     font-family: 'Yesteryear', cursive;
     margin-top: 25px;
     text-align: center;
-    -webkit-animation: fadein 3s;
-    /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 3s;
-    /* Firefox < 16 */
-    -ms-animation: fadein 3s;
-    /* Internet Explorer */
-    -o-animation: fadein 3s;
-    /* Opera < 12.1 */
-    animation: fadein 3s;
+    display: none;
 }
 
 @keyframes fadein {
