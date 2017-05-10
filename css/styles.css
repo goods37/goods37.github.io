@@ -1,35 +1,57 @@
-#page-header {
+.page-header {
     padding-top: 20px;
     /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
-    color: black;
+    color: white;
     font-weight: bold;
+    font-family: 'Yesteryear', cursive;
+    font-size: 90px;
+    text-shadow: 2px 1px 5px rgba(0, 0, 0, 1);
 }
 
 #content-container {
-    background-color: #d3d3d3;
+    background-color: #ffeead;
     /*Chrome and Safari*/
-    -webkit-animation-duration: 1s;
-    -webkit-animation-delay: .5s;
     padding-bottom: 200px;
 }
 
-body {
-    background: url('../washington_university_background_copy.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+
+#background {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffcc00+0,ff8000+100 */
+    background: #ffcc00; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffcc00 0%, #ff8000 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffcc00 0%,#ff8000 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffcc00 0%,#ff8000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc00', endColorstr='#ff8000',GradientType=0 ); /* IE6-9 */
+    font-family: Georgia;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-delay: .2s;
+}
+
+.container {
+    padding-bottom: 130px;
+}
+
+html, body {
     height: 100%;
+    -webkit-font-smoothing: subpixel-antialiased;
+    color: black;
+}
+.container-fluid {
+    min-height: 100%;
+    overflow-y: hidden; /* don't show content that exceeds my height */
 }
 
 .list-group {
     width: 100px;
 }
 
+
+
 .navbar {
+    background-color: #ffeead;
     /*Chrome and Safari*/
     -webkit-animation-duration: 0.5s;
-    -webkit-animation-delay: .3s;
+    -webkit-animation-delay: .7s;
     /*IE*/
     -ms-animation-duration: 3s;
     -ms-animation-delay: 1s;
@@ -41,14 +63,13 @@ body {
     -o-animation-delay: 1s;
 }
 
-.card-header {
-    background-color: darkorange;
-    color: white;
+.card {
+    background-color: #00aedb;
 }
 
 .navbar-brand {
     /*font-weight: bold;*/
-    font-size: 23px;
+    font-size: 18px;
 }
 
 .navbar .navbar-brand:hover {
@@ -61,15 +82,18 @@ body {
 #intro-fade-in {
     padding-top: 140px;
     font-size: 120px;
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-    letter-spacing: 1px;
+    text-shadow: 2px 1px 5px rgba(0, 0, 0, 1);
     font-family: 'Yesteryear', cursive;
     margin-top: 25px;
     text-align: center;
+
+}
+
+#intro-fade-in-subtext, #intro-fade-in {
     color: white;
     /*Chrome and Safari*/
     -webkit-animation-duration: 2s;
-    -webkit-animation-delay: .5s;
+    -webkit-animation-delay: .2s;
     /*IE*/
     -ms-animation-duration: 3s;
     -ms-animation-delay: 1s;
