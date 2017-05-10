@@ -1,5 +1,4 @@
 .page-header {
-    padding-top: 20px;
     /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
     color: white;
     font-weight: bold;
@@ -28,7 +27,8 @@
 }
 
 .container {
-    padding-bottom: 130px;
+    padding-top: 20px;
+    padding-bottom: 55px;
 }
 
 html, body {
