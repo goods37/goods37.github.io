@@ -7,10 +7,8 @@
     text-shadow: 2px 1px 5px rgba(0, 0, 0, 1);
 }
 
-#content-container {
-    background-color: #ffeead;
-    /*Chrome and Safari*/
-    padding-bottom: 200px;
+p, label {
+    color: white;
 }
 
 
@@ -21,7 +19,6 @@
     background: -webkit-linear-gradient(top, #ffcc00 0%,#ff8000 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #ffcc00 0%,#ff8000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc00', endColorstr='#ff8000',GradientType=0 ); /* IE6-9 */
-    font-family: Georgia;
     -webkit-animation-duration: .5s;
     -webkit-animation-delay: .2s;
 }
@@ -45,7 +42,26 @@ html, body {
     width: 100px;
 }
 
+.card-block, .card, .card-text, .card-footer {
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+}
 
+.btn-primary {
+    color: white;
+    background-color: #00aedb;
+    border-color: #00aedb;
+}
+
+.btn-primary:hover {
+    background-color: #0057e7;
+    border-color:  #0057e7;
+}
+
+.card {
+    /*border-color: #0057e7;*/
+}
 
 .navbar {
     background-color: #ffeead;
@@ -61,10 +77,6 @@ html, body {
     /*Opera*/
     -o-animation-duration: 3s;
     -o-animation-delay: 1s;
-}
-
-.card {
-    background-color: #00aedb;
 }
 
 .navbar-brand {
