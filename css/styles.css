@@ -116,3 +116,12 @@ html, body {
     -o-animation-duration: 3s;
     -o-animation-delay: 1s;
 }
+
+.spotify-card {
+    -webkit-animation-delay: .5s;
+    -webkit-animation-duration: 1s;
+}
+
+/*.spotify-image {*/
+    /*border-radius: 5px;*/
+/*}*/
