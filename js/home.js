@@ -8,6 +8,10 @@ $.getJSON(url)
     .done(function(data) {
         $.each( data.items, function( i, item ) {
 
+            if (i >= 12) {
+                return;
+            }
+
             console.log(item);
 
            var name = item.name,
@@ -25,18 +29,16 @@ $.getJSON(url)
                .addClass('zoomIn')
                .appendTo('#spotify-artists');
 
-            var image = $("<img>").attr('src', image_link).attr('width', 180).attr('height', 180)
+            var image = $("<img>").attr('src', image_link).attr('width', 80).attr('height', 80)
                 .addClass('card-img-top')
-                .addClass('text-center')
                 .addClass('mx-auto d-block')
                 .addClass('spotify-image')
-                .addClass('rounded')
                 .appendTo(card_div);
 
            var card_data = $("<div>")
                .addClass('card-block')
-               .append('<h4 class="card-title text-center">' + name + '</h4>')
-               .append('<p class="card-text text-center">Followers: ' + numberWithCommas(followers) + '</p>')
+               .append('<p class="card-title text-center">' + name + '</p>')
+               .append('<p class="card-text text-center"><small>Followers: ' + numberWithCommas(followers) + '</small></p>')
                .appendTo(card_div);
         });
     });
