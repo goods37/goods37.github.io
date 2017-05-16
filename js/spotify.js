@@ -8,7 +8,7 @@ $.getJSON(url)
     .done(function(data) {
         $.each( data.items, function( i, item ) {
 
-            if (i >= 12) {
+            if (i >= 3) {
                 return;
             }
 
@@ -29,7 +29,7 @@ $.getJSON(url)
                .addClass('zoomIn')
                .appendTo('#spotify-artists');
 
-            var image = $("<img>").attr('src', image_link).attr('width', 80).attr('height', 80)
+            var image = $("<img>").attr('src', image_link).attr('width', 50).attr('height', 50)
                 .addClass('card-img-top')
                 .addClass('mx-auto d-block')
                 .addClass('spotify-image')

@@ -1,9 +1,7 @@
 .page-header {
     /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
-    color: white;
-    font-weight: bold;
+    color: black;
     font-size: 40px;
-    text-shadow: 2px 1px 5px rgba(0, 0, 0, 1);
 }
 
 p, label {
