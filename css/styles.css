@@ -86,8 +86,8 @@ html, body {
     font-size: 18px;
 
     /* Override margins for equal spacing on both sides */
-    margin-right: .5rem;
-    margin-left: .5rem;
+    margin-left: 1rem;
+    text-align: center;
 }
 
 .navbar .navbar-brand:hover {
