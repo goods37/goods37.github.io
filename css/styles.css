@@ -13,14 +13,13 @@ p, label, small {
     border-radius: 3px;
 }
 
-
 #background {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffcc00+0,ff8000+100 */
     background: #ffba00; /* Old browsers */
     background: -moz-linear-gradient(top, #ffba00 0%, #ff8000 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #ffba00 0%,#ff8000 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #ffba00 0%,#ff8000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffba00', endColorstr='#ff8000',GradientType=0 ); /* IE6-9 */
+    background: -webkit-linear-gradient(top, #ffba00 0%, #ff8000 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffba00 0%, #ff8000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffba00', endColorstr='#ff8000', GradientType=0); /* IE6-9 */
     -webkit-animation-duration: .5s;
     -webkit-animation-delay: .2s;
 }
@@ -35,6 +34,7 @@ html, body {
     -webkit-font-smoothing: subpixel-antialiased;
     color: black;
 }
+
 .container-fluid {
     min-height: 100%;
     overflow-y: hidden; /* don't show content that exceeds my height */
@@ -54,7 +54,7 @@ html, body {
     color: white;
 
     background-color: #0057e7;
-    border-color:  #0057e7;
+    border-color: #0057e7;
 }
 
 .btn-primary:hover {
@@ -82,18 +82,29 @@ html, body {
     -o-animation-delay: 1s;
 }
 
-.navbar-brand {
-    font-size: 18px;
 
+.navbar-brand {
+    font-size: 12px;
     /* Override margins for equal spacing on both sides */
-    margin-left: .5rem;
-    text-align: center;
+    margin-left: 1rem;
+    text-align: right;
+}
+
+@media (min-width: 768px) {
+    .navbar-brand {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar-brand {
+        font-size: 18px;
+    }
 }
 
 .navbar .navbar-brand:hover {
     color: #939393;
 }
-
 
 /*Eric Goodman*/
 
@@ -131,6 +142,7 @@ html, body {
 .jumbotron {
     /*background: transparent;*/
 }
+
 /*.spotify-image {*/
-    /*border-radius: 5px;*/
+/*border-radius: 5px;*/
 /*}*/
