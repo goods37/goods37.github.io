@@ -4,7 +4,7 @@
     font-size: 40px;
 }
 
-p, label, small {
+p, label, small, .nav-link {
     color: white;
     font-weight: 200;
 }
@@ -35,15 +35,6 @@ html, body {
     color: black;
 }
 
-.container-fluid {
-    min-height: 100%;
-    overflow-y: hidden; /* don't show content that exceeds my height */
-}
-
-.list-group {
-    width: 100px;
-}
-
 .card-block, .card, .card-text, .card-footer {
     background-color: transparent;
     border-color: transparent;
@@ -62,10 +53,6 @@ html, body {
     border-color: #00aedb;
 }
 
-.card {
-    /*border-color: #0057e7;*/
-}
-
 .navbar {
     background-color: #ffeead;
     /*Chrome and Safari*/
@@ -81,23 +68,6 @@ html, body {
     -o-animation-duration: 3s;
     -o-animation-delay: 1s;
 }
-
-
-.navbar-brand {
-    font-size: 16px;
-}
-
-@media (min-width: 576px) {
-    .navbar-brand {
-        font-size: 18px;
-    }
-}
-
-/*@media (min-width: 1200px) {*/
-    /*.navbar-brand {*/
-        /*font-size: 18px;*/
-    /*}*/
-/*}*/
 
 .navbar .navbar-brand:hover {
     color: #939393;
@@ -135,11 +105,3 @@ html, body {
     -webkit-animation-delay: .5s;
     -webkit-animation-duration: 1s;
 }
-
-.jumbotron {
-    /*background: transparent;*/
-}
-
-/*.spotify-image {*/
-/*border-radius: 5px;*/
-/*}*/
