@@ -4,18 +4,23 @@
     font-size: 40px;
 }
 
-p, label {
+p, label, small {
     color: white;
+    font-weight: 200;
+}
+
+.btn {
+    border-radius: 3px;
 }
 
 
 #background {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffcc00+0,ff8000+100 */
-    background: #ffcc00; /* Old browsers */
-    background: -moz-linear-gradient(top, #ffcc00 0%, #ff8000 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #ffcc00 0%,#ff8000 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #ffcc00 0%,#ff8000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc00', endColorstr='#ff8000',GradientType=0 ); /* IE6-9 */
+    background: #ffba00; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffba00 0%, #ff8000 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffba00 0%,#ff8000 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffba00 0%,#ff8000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffba00', endColorstr='#ff8000',GradientType=0 ); /* IE6-9 */
     -webkit-animation-duration: .5s;
     -webkit-animation-delay: .2s;
 }
@@ -47,13 +52,14 @@ html, body {
 
 .btn-primary {
     color: white;
-    background-color: #00aedb;
-    border-color: #00aedb;
+
+    background-color: #0057e7;
+    border-color:  #0057e7;
 }
 
 .btn-primary:hover {
-    background-color: #0057e7;
-    border-color:  #0057e7;
+    background-color: #00aedb;
+    border-color: #00aedb;
 }
 
 .card {
