@@ -86,7 +86,6 @@ html, body {
 .navbar-brand {
     font-size: 12px;
     /* Override margins for equal spacing on both sides */
-    margin-left: 1rem;
     text-align: right;
 }
 
