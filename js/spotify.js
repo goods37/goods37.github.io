@@ -8,10 +8,6 @@ $.getJSON(url)
     .done(function(data) {
         $.each( data.items, function( i, item ) {
 
-            if (i >= 3) {
-                return;
-            }
-
             console.log(item);
 
            var name = item.name,
@@ -23,22 +19,19 @@ $.getJSON(url)
                image_height = item.images[image_index].height,
                image_width = item.images[image_index].width;
 
-           var card_div = $('<div class="card">')
+           var card_div = $('<div>')
                .addClass('spotify-card')
                .addClass('animated')
                .addClass('zoomIn')
                .appendTo('#spotify-artists');
 
-            var image = $("<img>").attr('src', image_link).attr('width', 50).attr('height', 50)
-                .addClass('card-img-top')
-                .addClass('mx-auto d-block')
+            var image = $("<img>").attr('src', image_link).attr('width', 100).attr('height', 100)
                 .addClass('spotify-image')
                 .appendTo(card_div);
 
            var card_data = $("<div>")
-               .addClass('card-block')
-               .append('<p class="card-title text-center">' + name + '</p>')
-               .append('<p class="card-text text-center"><small>Followers: ' + numberWithCommas(followers) + '</small></p>')
+               .append('<p class="text-center">' + name + '</p>')
+               .append('<p class="text-center"><small>Followers: ' + numberWithCommas(followers) + '</small></p>')
                .appendTo(card_div);
         });
     });

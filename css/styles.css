@@ -1,89 +1,123 @@
-.page-header {
-    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
-    color: black;
-    font-size: 40px;
-}
-
 p, label, small, .nav-link {
     color: white;
-    font-weight: 200;
+    font-weight: 300;
+    font-size: 19px;
 }
+
+.lead {
+    font-size: 22px !important;
+}
+
+#form-message-div {
+    margin-top: 10px;
+}
+
+/*
+* === Panels ===
+*/
+
+.panel {
+    width: 100%;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.green {
+    background-color: limegreen;
+}
+
+/* Global fonts */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+#intro, #contact {
+    height: 101%;
+    width: 101%;
+}
+
+/* About */
+.blue {
+    background-color: dodgerblue;
+
+    /* Longer section, add padding */
+    padding-bottom: 100px;
+}
+
+/* Projects*/
+.red {
+    background-color: #e13b5c;
+
+    /* Longer section, add padding */
+    padding-bottom: 100px;
+}
+
+/*
+* === BUTTONS AND ICONS ===
+*/
+
+/* Icons */
+
+.fa {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: black;
+}
+
+.fa:hover {
+    color: white;
+}
+
+/* Buttons */
 
 .btn {
     border-radius: 3px;
 }
 
-#background {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffcc00+0,ff8000+100 */
-    background: #ffba00; /* Old browsers */
-    background: -moz-linear-gradient(top, #ffba00 0%, #ff8000 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #ffba00 0%, #ff8000 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #ffba00 0%, #ff8000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffba00', endColorstr='#ff8000', GradientType=0); /* IE6-9 */
-    -webkit-animation-duration: .5s;
-    -webkit-animation-delay: .2s;
+.project-btn {
+    margin-bottom: 15px;
 }
 
-.container {
-    padding-top: 20px;
-    padding-bottom: 55px;
+#submit-btn {
+    margin-top: 20px;
 }
 
-html, body {
-    height: 100%;
-    -webkit-font-smoothing: subpixel-antialiased;
-    color: black;
-}
-
-.card-block, .card, .card-text, .card-footer {
-    background-color: transparent;
-    border-color: transparent;
+.project-btn, #submit-btn {
     color: white;
-}
-
-.btn-primary {
-    color: white;
-
     background-color: #0057e7;
     border-color: #0057e7;
 }
 
-.btn-primary:hover {
+.project-btn:hover, #submit-btn:hover {
     background-color: #00aedb;
     border-color: #00aedb;
 }
 
-.navbar {
-    background-color: #ffeead;
-    /*Chrome and Safari*/
-    -webkit-animation-duration: 0.5s;
-    -webkit-animation-delay: .7s;
-    /*IE*/
-    -ms-animation-duration: 3s;
-    -ms-animation-delay: 1s;
-    /*Firefox*/
-    -moz-animation-duration: 3s;
-    -moz-animation-delay: 1s;
-    /*Opera*/
-    -o-animation-duration: 3s;
-    -o-animation-delay: 1s;
+.about-btn {
+    color: white;
+    background-color: #ff7b00;
+    border-color: #ff7b00;
+
+    /* Push images down */
+    margin-bottom: 25px;
 }
 
-.navbar .navbar-brand:hover {
-    color: #939393;
+.about-btn:hover {
+    background-color: #ffaf65;
+    border-color: #ffaf65;
 }
 
-/*Eric Goodman*/
 
-#intro-fade-in {
-    padding-top: 140px;
-    font-size: 120px;
-    text-shadow: 2px 1px 5px rgba(0, 0, 0, 1);
-    font-family: 'Yesteryear', cursive;
-    margin-top: 25px;
-    text-align: center;
-
-}
+/* Animation */
 
 #intro-fade-in-subtext, #intro-fade-in {
     color: white;
@@ -91,17 +125,52 @@ html, body {
     -webkit-animation-duration: 2s;
     -webkit-animation-delay: .2s;
     /*IE*/
-    -ms-animation-duration: 3s;
-    -ms-animation-delay: 1s;
+    -ms-animation-duration: 2s;
+    -ms-animation-delay: .2s;
     /*Firefox*/
-    -moz-animation-duration: 3s;
-    -moz-animation-delay: 1s;
+    -moz-animation-duration: 2s;
+    -moz-animation-delay: .2s;
     /*Opera*/
-    -o-animation-duration: 3s;
-    -o-animation-delay: 1s;
+    -o-animation-duration: 2s;
+    -o-animation-delay: .2s;
 }
 
-.spotify-card {
-    -webkit-animation-delay: .5s;
-    -webkit-animation-duration: 1s;
+/*
+* === MOBILE OPTIMIZATION ===
+*/
+
+.page-header {
+    text-shadow: -1px 0 white;
+    color: black;
+    font-size: 80px;
+    font-family: 'Yesteryear', cursive;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#intro-fade-in {
+    text-shadow: 2px 1px 5px rgba(0, 0, 0, 1);
+    font-family: 'Yesteryear', cursive;
+    text-align: center;
+    font-size: 80px;
+    padding-top: 30px;
+}
+
+#scroll-arrow {
+    padding-top: 50px;
+}
+
+@media (min-width: 768px) {
+    #intro-fade-in {
+        font-size: 80px;
+        padding-top: 100px;
+    }
+
+    #scroll-arrow {
+        padding-top: 100px;
+    }
+
+    .page-header {
+        padding-bottom: 50px;
+    }
 }
