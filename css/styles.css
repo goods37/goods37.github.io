@@ -4,10 +4,6 @@ p, label, small {
     font-size: 19px;
 }
 
-.lead {
-    font-size: 22px !important;
-}
-
 #form-message-div {
     margin-top: 10px;
 }
@@ -136,7 +132,6 @@ body, html {
 
 .page-header {
     color: black;
-    font-size: 75px;
     padding-top: 20px;
     padding-bottom: 10px;
 }
@@ -155,7 +150,7 @@ body, html {
 
 @media (min-width: 768px) {
     #intro-fade-in {
-        font-size: 80px;
+        font-size: 120px;
         padding-top: 100px;
     }
 
