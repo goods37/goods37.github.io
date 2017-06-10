@@ -48,17 +48,11 @@ body, html {
 /* About */
 .blue {
     background-color: dodgerblue;
-
-    /* Longer section, add padding */
-    padding-bottom: 100px;
 }
 
 /* Projects*/
 .red {
     background-color: #e13b5c;
-
-    /* Longer section, add padding */
-    padding-bottom: 100px;
 }
 
 /*
@@ -172,5 +166,8 @@ body, html {
 
     .page-header {
         padding-bottom: 50px;
+    }
+    #about, #projects {
+        padding-bottom: 100px;
     }
 }
