@@ -16,9 +16,9 @@ p, label, small {
 * === Panels ===
 */
 
-.panel {
-    width: 100%;
-}
+/*.panel {*/
+    /*width: 100%;*/
+/*}*/
 
 .orange {
     background-color: orange;
@@ -38,12 +38,11 @@ body {
 
 body, html {
     height: 100%;
-    width: 100%;
 }
 
 #intro, #contact {
-    height: 101%;
-    width: 101%;
+    height: 100%;
+    width: 100%;
 }
 
 /* About */
