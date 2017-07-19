@@ -1,4 +1,4 @@
-p, label, small {
+p, label {
     color: white;
     font-weight: 300;
     font-size: 19px;
@@ -6,6 +6,11 @@ p, label, small {
 
 #form-message-div {
     margin-top: 10px;
+}
+
+.spotify-image {
+    height: 400px;
+    width: 400px;
 }
 
 /*
@@ -37,8 +42,11 @@ body, html {
 }
 
 #intro, #contact {
-    height: 100%;
-    width: 100%;
+    min-height: 100vh;
+}
+
+#about, #projects, #contact {
+    padding-bottom: 50px;
 }
 
 /* About */
@@ -58,8 +66,8 @@ body, html {
 /* Icons */
 
 .fa {
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     color: black;
 }
 
@@ -165,4 +173,9 @@ body, html {
     #about, #projects {
         padding-bottom: 100px;
     }
+
+    #contact {
+        height: 100%;
+    }
 }
+
