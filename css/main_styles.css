@@ -13,6 +13,10 @@ p, label {
     width: 400px;
 }
 
+.about-me {
+    margin-bottom: 40px;
+}
+
 /*
 * === Panels ===
 */
@@ -105,7 +109,6 @@ body, html {
     color: white;
     background-color: #ff7b00;
     border-color: #ff7b00;
-
     /* Push images down */
     margin-bottom: 25px;
 }
@@ -178,4 +181,46 @@ body, html {
         height: 100%;
     }
 }
+
+/* === SAFARI TRANSITIONS === */
+
+.orange-blue {
+    background: linear-gradient(180deg, orange, #519ee9);
+}
+
+.blue-red {
+    background: linear-gradient(180deg, #519ee9, #e13b5c);
+}
+
+.red-green {
+    background: linear-gradient(180deg, #e13b5c, #4cd44c)
+}
+
+.trans {
+    /* Inititally set to hidden */
+    visibility: hidden;
+    height: 75%;
+    background-size: 100% 100%;
+
+    -webkit-animation: AnimationName 59s ease infinite;
+    -moz-animation: AnimationName 59s ease infinite;
+    animation: AnimationName 59s ease infinite;
+}
+
+@-webkit-keyframes trans {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes trans {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes trans {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
 

@@ -35,25 +35,34 @@
         </div>
     </div>
 </section>
+<section class="trans panel orange-blue"></section>
 <section class="panel blue" id="about">
     <div class="container">
         <h1 class="text-center page-header display-4">About</h1>
         <div class="row">
             <div class="col">
-                <p class="lead text-center">
+                <p class="lead text-center about-me">
                     If you haven't gotten the hint, my name is Eric Goodman. I'm currently a
-                    rising senior at Washington University in St. Louis studying computer science. Read on to
-                    hear more about me and some of my interests.
+                    rising senior at Washington University in St. Louis
+                    studying computer science.
+                </p>
+                <p class="lead text-center about-me">
+                    I've loved computers sincethe day I was physically capable
+                    of playing Age of Empires. Specifically, I'm primarily
+                    interested in back end architecture, design, and
+                    scalability. I love the combination of algorithmic problem
+                    solving, like parallelizing operations and efficiently
+                    storing and querying data, with more "real world" issues
+                    like load balancing and security.</p>
+                <p class="lead text-center about-me">
+                    Keep reading to hear more about some of my interests.
                 </p>
             </div>
         </div>
         <div class="row justify-content-center">
-            <a href="http://docdro.id/P3C4YiM" target="_blank" class="btn btn-primary about-btn">Resume</a>
+            <a href="http://docdro.id/B3IrIsl" target="_blank" class="btn btn-primary about-btn">Resume</a>
         </div>
         <div class="row justify-content-center">
-            <!--<div class="col-8 col-lg-4 col-md-6">-->
-            <!--<img src="static/eric_goodman.jpg" alt="Eric Goodman" class="rounded img-fluid">-->
-            <!--</div>-->
         </div>
         <hr>
         <div class="row align-items-center">
@@ -114,6 +123,7 @@
         </div>
     </div>
 </section>
+<section class="trans panel blue-red"></section>
 <section class="panel red" id="projects">
     <div class="container test col-10 col-lg-9 animated fadeIn">
         <h1 class="text-center page-header display-4">Projects</h1>
@@ -211,6 +221,7 @@
         </div>
     </div>
 </section>
+<section class="trans panel red-green"></section>
 <section class="panel green" id="contact">
     <div class="container-fluid">
         <h1 class="text-center page-header display-4">Contact</h1>
@@ -285,7 +296,7 @@
                 offset: offset
             })
                 .setPin(slides[i])
-                .addIndicators()
+                //.addIndicators()
                 .addTo(controller);
 
             scenes.push(scene);
@@ -308,7 +319,12 @@
 
 
         if (!isMobile && !isSafari) {
+            // Remove transition divs
+            $("section.trans").remove();
             var scenes = createScenes(controller);
+        }
+        else {
+            $("section.trans").css('visibility', 'visible');
         }
 
         var timeoutDuration = 400;
