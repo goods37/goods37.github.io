@@ -1,37 +1,60 @@
 #main {
     margin-top: 20px;
+    visibility: hidden;
 }
 
 body {
-    background-color: indianred;
     height: auto;
-}
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #E44D26;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F16529, #E44D26);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F16529, #E44D26); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-.artist-name {
-    font-family: Quicksand;
-    font-size: 30px;
-}
-
-.nav-item>a {
-    font-size: 20px;
-    color: white;
 }
 
 .artist {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-#follwedartistslist > small {
-    font-size: 20px;
+.artist-name {
+    font-size: 30px;
+}
+
+.artist-popularity {
+    color: white;
+}
+
+.nav-item>a {
+    font-size: 15px;
+    color: black;
+}
+
+input {
+    height: 30px;
+}
+
+.navbar {
+    background-color: green;
+}
+
+.nav-item>a:hover {
+    color: blue;
 }
 
 ul {
     list-style: none;
+    padding-left: 0;
+}
+
+.blank {
+    height: 40px;
 }
 
 li {
     opacity: 1;
 }
+
 li.ng-enter {
     -webkit-transition: 1s;
     transition: 2s;
@@ -42,4 +65,44 @@ li.ng-enter-active {
 }
 li.ng-leave {
     opacity: 0;
+}
+
+.progress {
+    background-color: lightgray;
+}
+
+.progress-value {
+    position:absolute;
+    margin-top:8px;
+    font-size: 15px;
+    color: white;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+
+    margin: 40vh auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+    0% { -webkit-transform: perspective(120px) }
+    50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+    100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    } 50% {
+          transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+          -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+      } 100% {
+            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        }
 }

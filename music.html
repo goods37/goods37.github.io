@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>My Music</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/music_styles.css">
+
+</head>
+<body ng-controller="mainController">
+<!-- AngularJS Material Dependencies -->
+
+<script src="js/app.js"></script>
+
+<div class="container" id="container">
+    <!--Spinner-->
+    <div class="spinner"></div>
+
+
+    <div id="main">
+        <!--Inject content here-->
+        <div ng-view></div>
+    </div>
+
+    <div class="blank"></div>
+    <nav class="navbar bg-faded fixed-bottom" role="navigation">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a href="" ng-click="loadFollowed()"
+                   class="nav-link">Followed</a>
+            </li>
+            <li class="nav-item">
+                <a href="" ng-click="loadRecent()" class="nav-link">
+                    Recently Played Tracks</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+</body>
+</html>

@@ -1,61 +1,37 @@
-<!DOCTYPE html>
-<html ng-app="app">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>My Music</title>
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/angular.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Quicksand"
-          rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet"
-          href="https://gitcdn.link/repo/angular/bower-material/master/angular-material.css">
-    <link rel="stylesheet" href="css/music_styles.css">
-
-</head>
-<body>
-<!-- AngularJS Material Dependencies -->
-
-<script src="js/app.js"></script>
-<nav class="navbar navbar-inverse bg-inverse fixed-bottom" role="navigation">
-    <ul class="nav justify-content-center">
-        <li class="nav-item">
-            <a class="nav-link" href="/">Followed Artists</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="about">Recently Played</a>
-    </ul>
-</nav>
-<div class="container" id="container">
-    <div id="main" ng-controller="followed">
-        <div class="row justify-content-center">
-            <div class="text-center col-lg-5 col-md-7 col-9">
-                <h4 class="lead">Search:</h4>
-                <input type="text" ng-model="searchFollowed.name"
-                       id="searchFollowed" class="form-control">
-            </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="text-center col-lg-5 col-md-7 col-9">
+            <span>Filter:</span>
+            <input type="text" ng-model="searchFollowed.name"
+                   id="searchFollowed" class="form-control">
         </div>
-
-        <!-- Artist list -->
-        <ul>
-            <li ng-repeat="artist in followedArtists | filter:searchFollowed"
-                id="follwedartistslist"
-                class="justify-content-center animate artist">
-                <span class="artist-name"
-                      style="color:black">{{artist.name}}</span>
-                <small>Followers: {{artist.followers.total}}</small>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar"
-                         style="width: {{artist.popularity}}%; height: 20px;"
-                         aria-valuenow={{artist.popularity}} aria-valuemin="0"
-                         aria-valuemax="100"></div>
-                </div>
-            </li>
-        </ul>
     </div>
+    <hr>
+    <!-- Artist list -->
+    <ul>
+        <li ng-repeat="artist in followedArtists | filter:searchFollowed" id="follwedartistslist"
+            class="animate artist">
+            <!--Artist name and followers-->
+            <div class="row align-items-center">
+                <div class="col-4">
+                    <span class="artist-name">{{artist.name}}</span>
+                    <small class="artist-followers">Followers: {{artist.followers.total | number : fractionSize}}
+                    </small>
+                </div>
+                <div class="col-8">
+                    <!--Bar-->
+                    <div class="progress">
+                        <div class="progress-bar align-content-center" role="progressbar"
+                             style="width:{{artist.popularity}}%; height: 30px;"
+                             aria-valuenow={{artist.popularity}} aria-valuemin="0"
+                             aria-valuemax="100">
+                            <span class="progress-value">Popularity: {{artist.popularity}}</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </li>
+    </ul>
 </div>
 
-</body>
-</html>
