@@ -1,10 +1,14 @@
-<!-- Recently played list -->
-<ul>
-    <li ng-repeat="track in recentlyPlayed"
-        class="justify-content-center animate">
-        <p class="lead" style="color:black">{{track.name}}</p>
-        <p>{{track.artists[0].name}}</p>
-        <img class="img-thumbnail img" src="{{track.album.images[1].url}}"
-             alt="{{track.name}} album artwork">
-    </li>
-</ul>
+<div class="card-deck justify-content-center">
+    <div class="card mx-auto" ng-repeat="track in recentlyPlayed">
+        <img class="img-thumbnail img card-img-top"
+             src="{{track.album.images[1].url}}"
+             alt="{{recentlyPlayed[$index].name}} album artwork">
+        <div class="card-block text-center">
+            <p class="card-title" style="color:black">{{track.name}}</p>
+            <p class="card-title">{{track.artists[0].name}}</p>
+        </div>
+    </div>
+</div>
+
+
+

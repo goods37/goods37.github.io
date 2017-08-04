@@ -12,7 +12,6 @@
           rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/music_styles.css">
-
 </head>
 <body ng-controller="mainController">
 <!-- AngularJS Material Dependencies -->
@@ -22,7 +21,9 @@
 <div class="container" id="container">
     <!--Spinner-->
     <div class="spinner"></div>
-
+    <div class="text-center">
+        <h1>{{title}}</h1>
+    </div>
 
     <div id="main">
         <!--Inject content here-->
@@ -30,18 +31,18 @@
     </div>
 
     <div class="blank"></div>
-    <nav class="navbar bg-faded fixed-bottom" role="navigation">
+
+    <nav class="navbar bg-inverse fixed-bottom" role="navigation">
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a href="" ng-click="loadFollowed()"
-                   class="nav-link">Followed</a>
+                <a href="" ng-click="loadFollowed()" class="nav-link">Followed Artists</a>
             </li>
             <li class="nav-item">
-                <a href="" ng-click="loadRecent()" class="nav-link">
-                    Recently Played Tracks</a>
+                <a href="" ng-click="loadRecent()" class="nav-link">Recently Played Tracks</a>
             </li>
         </ul>
     </nav>
+
 </div>
 
 </body>

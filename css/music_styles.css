@@ -7,15 +7,49 @@ body {
     height: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #E44D26;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #F16529, #E44D26);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #F16529, #E44D26); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background: #667db6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #667db6, #0082c8, #0082c8, #667db6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: Quicksand;
 
 }
 
 .artist {
     margin-bottom: 20px;
 }
+
+.card, .card-img-top {
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+/*@media (min-width: 576px) {*/
+    /*.card, .card-img-top {*/
+        /*min-width: 200px;*/
+        /*max-width: 200px;*/
+    /*}*/
+/*}*/
+
+/*@media (min-width: 768px) {*/
+    /*.card, .card-img-top {*/
+        /*min-width: 200px;*/
+        /*max-width: 200px;*/
+    /*}*/
+/*}*/
+
+/*@media (min-width: 992px) {*/
+    /*.card, .card-img-top {*/
+        /*min-width: 250px;*/
+        /*max-width: 250px;*/
+    /*}*/
+/*}*/
+
 
 .artist-name {
     font-size: 30px;
@@ -25,9 +59,9 @@ body {
     color: white;
 }
 
-.nav-item>a {
+.nav-item > a {
     font-size: 15px;
-    color: black;
+    color: white;
 }
 
 input {
@@ -38,7 +72,7 @@ input {
     background-color: green;
 }
 
-.nav-item>a:hover {
+.nav-item > a:hover {
     color: blue;
 }
 
@@ -60,9 +94,11 @@ li.ng-enter {
     transition: 2s;
     opacity: 0;
 }
+
 li.ng-enter-active {
     opacity: 1;
 }
+
 li.ng-leave {
     opacity: 0;
 }
@@ -71,11 +107,15 @@ li.ng-leave {
     background-color: lightgray;
 }
 
+.progress-bar {
+    background-color: coral;
+}
+
 .progress-value {
-    position:absolute;
-    margin-top:8px;
+    position: absolute;
+    margin-top: 8px;
     font-size: 15px;
-    color: white;
+    color: black;
 }
 
 .spinner {
@@ -88,21 +128,33 @@ li.ng-leave {
     animation: sk-rotateplane 1.2s infinite ease-in-out;
 }
 
+small, span {
+    color: white;
+}
+
 @-webkit-keyframes sk-rotateplane {
-    0% { -webkit-transform: perspective(120px) }
-    50% { -webkit-transform: perspective(120px) rotateY(180deg) }
-    100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+    0% {
+        -webkit-transform: perspective(120px)
+    }
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg)
+    }
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+    }
 }
 
 @keyframes sk-rotateplane {
     0% {
         transform: perspective(120px) rotateX(0deg) rotateY(0deg);
         -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
-    } 50% {
-          transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-          -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
-      } 100% {
-            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-            -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-        }
+    }
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    }
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
 }
