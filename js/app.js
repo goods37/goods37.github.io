@@ -1,6 +1,4 @@
-/**
- * Created by Eric Goodman on 6/17/17.
- */
+/* Author: Eric Goodman*/
 
 var app = angular.module('app', ['ngRoute']);
 
@@ -22,13 +20,12 @@ app.config(function ($routeProvider) {
 
 
 app.service('spotify', function ($http, $q) {
-
+    /* Service the Spotify request to avoid unnecessary requests */
     function getSpotifyData() {
         var q = $q.defer();
         $http.get('https://spotifyeric.herokuapp.com/', {cache: true})
             .then(function success(response) {
-                    cache = response.data;
-                    q.resolve(cache)
+                    q.resolve(response.data)
                 },
                 function failure(err) {
                     q.reject(err);
@@ -43,7 +40,6 @@ app.service('spotify', function ($http, $q) {
 
 app.controller('mainController', function ($scope, $location, spotify) {
     // Get data from Spotify, then present user with followed artists page
-
     $scope.loadFollowed = function () {
         $scope.title = 'Followed Artists';
         $location.url('/followed');
@@ -67,17 +63,18 @@ app.controller('followed', function followed($scope, spotify) {
     spotify.getSpotifyData().then(function (response) {
         $scope.followedArtists = response[0].followed_artists;
 
-        var spinner = $('.spinner');
-        spinner.css('visibility', 'hidden');
-        spinner.remove();
-
-        $('#main').css({
-            opacity: 0.0,
-            visibility: "visible"
-        }).animate({opacity: 1.0}, 2000);
+        // If spinner exists, remove and animate visibility
+        if ( $('.spinner').length ) {
+            console.log('spinner');
+            $('.spinner').css('visibility', 'hidden');
+            $('.spinner').remove();
+            $('#main').css({
+                opacity: 0.0,
+                visibility: "visible"
+            }).animate({opacity: 1.0}, 2000);
+        }
 
     }).catch(function (err) {
-
         console.error(err);
     });
 });
@@ -85,13 +82,12 @@ app.controller('followed', function followed($scope, spotify) {
 app.controller('recent', function recent($scope, spotify) {
     spotify.getSpotifyData().then(function (response) {
         $scope.recentlyPlayed = [];
+
         response[1].recently_played.items.forEach(function (item) {
             $scope.recentlyPlayed.push(item.track);
         });
-        $('#main').css({
-            opacity: 0.0,
-            visibility: "visible"
-        }).animate({opacity: 1.0}, 2000);
+
+        $('#main').css('visibility', "visible");
         console.log($scope.recentlyPlayed);
     });
 });
