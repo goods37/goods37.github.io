@@ -6,7 +6,6 @@
     <script src="js/jquery-3.1.1.min.js"></script>
     <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Yesteryear|Quicksand" rel="stylesheet">
-    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <script src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
@@ -16,8 +15,8 @@
 <body>
 <section class="panel orange" id="intro">
     <div class="container col-10 col-lg-9">
-        <h1 id="intro-fade-in" class="text-center animated fadeIn">Eric Goodman</h1>
-        <h3 id="intro-fade-in-subtext" class="text-center animated fadeIn">Student at Washington University in St.
+        <h1 id="intro-fade-in" class="text-center">Eric Goodman</h1>
+        <h3 id="intro-fade-in-subtext" class="text-center">Student at Washington University in St.
             Louis</h3>
         <div class="row justify-content-center">
             <a href="http://www.linkedin.com/in/ericlgoodman" target="_blank" title="LinkedIn">
@@ -125,7 +124,7 @@
 </section>
 <section class="trans panel blue-red"></section>
 <section class="panel red" id="projects">
-    <div class="container test col-10 col-lg-9 animated fadeIn">
+    <div class="container test col-10 col-lg-9">
         <h1 class="text-center page-header display-4">Projects</h1>
         <div class="row justify-content-center text-center">
             <h3>Net Value</h3>
@@ -346,7 +345,13 @@
             }
 
         });
+
+        // Animate "Eric Goodman"
+
     });
+    $('#intro-fade-in').animate({opacity: 1.0}, 1000);
+    $('#intro-fade-in-subtext').animate({opacity: 1.0}, 3000);
+
 </script>
 <script>
     // Animate scrolling

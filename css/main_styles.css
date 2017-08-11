@@ -38,7 +38,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Quicksand', sans-serif;
+}
 
+#intro-fade-in, #intro-fade-in-subtext {
+    opacity: 0;
 }
 
 body, html {
