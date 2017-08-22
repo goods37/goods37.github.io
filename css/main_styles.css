@@ -8,13 +8,17 @@ p, label {
     margin-top: 10px;
 }
 
+.eric-image {
+    margin-bottom: 60px;
+}
+
 .spotify-image {
     height: 400px;
     width: 400px;
 }
 
 .about-me {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 /*
@@ -147,7 +151,6 @@ body, html {
 .page-header {
     color: black;
     padding-top: 20px;
-    padding-bottom: 10px;
 }
 
 #intro-fade-in {
