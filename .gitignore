@@ -5,9 +5,9 @@
 _site/
 
 # Font awesome
-css/font-awesome-4.7.0
+css/packages/font-awesome-4.7.0
 
 # Scrollmagic
-js/scrollmagic
+js/packages/scrollmagic
 
 !/.gitignore
