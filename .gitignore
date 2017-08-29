@@ -1,3 +1,10 @@
+# Hidden files
 .*
+
+# Jekyll site folder
 _site/
+
+# Font awesome
+css/font-awesome-4.7.0
+
 !/.gitignore
