@@ -10,6 +10,7 @@ p, label {
 
 .eric-image {
     margin-bottom: 60px;
+    border-radius: 100%;
 }
 
 .spotify-image {
